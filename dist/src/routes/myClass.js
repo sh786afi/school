@@ -18,8 +18,7 @@ var _mongoose = require("../db/mongoose");
 //Add a new Class API
 var addClass = exports.addClass = async function addClass(req, res) {
   var createClass = new _classModel.modelClass(req.body);
-  console.log('abcccc', req.body);
-  console.log('creeeeea', createClass);
+  // console.log('abcccc',req.body);
   try {
     console.log(createClass);
     await createClass.save();

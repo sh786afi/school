@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+var Schema = mongoose.Schema;
 var modelClass=mongoose.model('ClassRoom',new mongoose.Schema({
     ClassName: {
         type: String,
