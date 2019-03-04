@@ -1,12 +1,13 @@
 "use strict";
 
-var _mongoose = require("mongoose");
-
-var _mongoose2 = _interopRequireDefault(_mongoose);
+var _mongoose = _interopRequireDefault(require("mongoose"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_mongoose2.default.Promise = global.Promise;
-_mongoose2.default.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/SchoolDB');
+_mongoose.default.Promise = global.Promise;
 
-module.exports = { mongoose: _mongoose2.default };
+_mongoose.default.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/SchoolDB');
+
+module.exports = {
+  mongoose: _mongoose.default
+};

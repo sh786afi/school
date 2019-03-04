@@ -1,24 +1,24 @@
 "use strict";
 
-var _mongoose = require("mongoose");
-
-var _mongoose2 = _interopRequireDefault(_mongoose);
+var _mongoose = _interopRequireDefault(require("mongoose"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Schema = _mongoose2.default.Schema;
-var modelClass = _mongoose2.default.model('ClassRoom', new _mongoose2.default.Schema({
-    ClassName: {
-        type: String,
-        required: true,
-        minlength: 1,
-        trim: true
-    },
-    CapcityOfStudent: {
-        type: Number,
-        required: true
+var Schema = _mongoose.default.Schema;
 
-    }
+var modelClass = _mongoose.default.model('ClassRoom', new _mongoose.default.Schema({
+  ClassName: {
+    type: String,
+    required: true,
+    minlength: 1,
+    trim: true
+  },
+  CapacityOfStudent: {
+    type: Number,
+    required: true
+  }
 }));
 
-module.exports = { modelClass: modelClass };
+module.exports = {
+  modelClass
+};

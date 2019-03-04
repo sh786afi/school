@@ -7,7 +7,7 @@ var modelClass=mongoose.model('ClassRoom',new mongoose.Schema({
         minlength: 1,
         trim: true
     },
-    CapcityOfStudent:  {
+    CapacityOfStudent:  {
         type: Number,
         required: true
         
